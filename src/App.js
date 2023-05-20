@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <video autoPlay loop muted className="Background">
-        <source src={process.env.PUBLIC_URL + '/background.mp4'} type="video/mp4" />
+        <source src={`${process.env.PUBLIC_URL}/background.mp4`} type="video/mp4" />
       </video>
 
       <header className="App-header">
