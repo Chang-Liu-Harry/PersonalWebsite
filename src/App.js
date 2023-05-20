@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <video autoPlay loop muted className="Background">
+        <source src={process.env.PUBLIC_URL + '/background.mp4'} type="video/mp4" />
+      </video>
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav className="circle-nav">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+          </ul>
+        </nav>
       </header>
     </div>
   );

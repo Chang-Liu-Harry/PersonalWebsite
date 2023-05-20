@@ -1,38 +1,75 @@
 .App {
-  text-align: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.circle-nav {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.circle-nav li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-origin: bottom center;
+}
+
+.circle-nav a {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Adjust the rotation for each item */
+.circle-nav li:nth-child(1) {
+  transform: rotate(0deg);
+}
+.circle-nav li:nth-child(2) {
+  transform: rotate(72deg);
+}
+.circle-nav li:nth-child(3) {
+  transform: rotate(144deg);
+}
+.circle-nav li:nth-child(4) {
+  transform: rotate(216deg);
+}
+.circle-nav li:nth-child(5) {
+  transform: rotate(288deg);
+}
+
